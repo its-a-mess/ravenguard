@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RavenGuard Protection</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333;
+            background-color: #f5f5f5;
+            width: 100%;
+        }
+        
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .hero-section {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.pexels.com/photos/2478248/pexels-photo-2478248.jpeg');
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 1.5rem;
+        }
+        
+        .hero-section h1 {
+            font-size: 3rem;
+            font-weight: 700;
+        }
+        
+        .hero-section p {
+            font-size: 1.5rem;
+        }
+
+        .s1{
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url('https://images.pexels.com/photos/139762/pexels-photo-139762.jpeg');
+            padding: 50px 0;
+            height: 40vh;
+        }
+
+        .s2{
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url('https://images.pexels.com/photos/259239/pexels-photo-259239.jpeg');
+            padding: 50px 0;
+            height: 40vh;
+        }
+
+        .s3{
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url('https://images.pexels.com/photos/2046779/pexels-photo-2046779.jpeg');
+            padding: 50px 0;
+            height: 40vh;
+        }
+        
+        .expertise-section {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.pexels.com/photos/1257860/pexels-photo-1257860.jpeg');
+            padding: 50px 0;
+        }
+        
+        .about-section {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.pexels.com/photos/451839/pexels-photo-451839.jpeg');
+            padding: 50px 0;
+        }
+        
+        .contact-section {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.pexels.com/photos/1105766/pexels-photo-1105766.jpeg');
+            padding: 50px 0;
+        }
+        
+        .card {
+            position: relative;
+            width: 25%;
+            height: 250px;
+            overflow: hidden;
+            perspective: 1000px;
+            border: none;
+            border-radius: 0;
+        }
+        
+        .card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        
+        .card-body {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+            backface-visibility: hidden;
+        }
+        
+        .card:hover .card-body {
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+        }
+        
+        .card-body .card-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #fff;
+        }
+        
+        .card-body .card-text {
+            font-size: 1rem;
+            color: #fff;
+        }
+        
+        /* Navbar Styles */
+        .navbar {
+            background-color: #333;
+            padding: 10px 0;
+        }
+        
+        .navbar-brand {
+            font-size: 1.5 rem;
+            font-weight: 700;
+            color: #fff;
+        }
+        
+        .nav-link {
+            color: #fff;
+        }
+        
+        .nav-link:hover {
+            color: #ccc;
+        }
+        
+        /* Footer Styles */
+        .footer {
+            background-color: #333;
+            padding: 20px 0;
+            text-align: center;
+            color: #fff;
+        }
+        
+        .service-box {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            background: #333;
+            border-radius: 10px;
+        }
+        
+        .service-box img {
+            width: 50%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin: 0px;
+        }
+        
+        .service-content {
+            padding: 20px;
+        }
+        
+        .service-content h5 {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .service-content p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        .btn{
+            border-radius: 3px;
+            border: 0;
+            background-color: green;
+        }
+        .container{
+            color: #fff;
+        }
+    </style>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-transparent">
+        <div class="container">
+            <a class="navbar-brand" href="#">RavenGuard Protection</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#expertise">Expertise</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="hero-section parallax" id="home">
+        <div class="container">
+            <h1 class="display-4">Reliable and Professional Security Services</h1>
+            <p class="lead">Providing top-notch security solutions for events, corporations, and patrolling.</p>
+            <a href="#contact" class="btn btn-primary btn-lg">Get in Touch</a>
+        </div>
+    </section>
+
+    <!--s1 seciton-->
+    <section class="s1 parallax" id="services">
+        <div class="container">
+            <h5 class="service-title">Event Security</h5>
+            <p class="service-description">Expert security for large and small events to ensure safety and order.</p>
+        </div>
+    </section>
+
+    <!--s2 seciton-->
+    <section class="s2 parallax">
+        <div class="container">
+            <h5 class="service-title">Corporate Security</h5>
+            <p class="service-description">Comprehensive security services for businesses and corporate facilities.</p>
+        </div>
+    </section>
+
+    <!--s3 seciton-->
+    <section class="s3 parallax">
+        <div class="container">
+            <h5 class="service-title">Patrolling</h5>
+            <p class="service-description">Regular and efficient patrols to protect properties and assets.</p>
+        </div>
+    </section>
+    
+    <!-- Expertise Section -->
+    <section class="expertise-section parallax" id="expertise">
+        <div class="container">
+            <h3 style="color: #fff;">Expertise</h3>
+            <div class="row row-cols-1 row-cols-md-4 g-0">
+                <div class="col">
+                    <div class="card h-100 w-100 border-0">
+                        <img src="https://images.pexels.com/photos/11578850/pexels-photo-11578850.jpeg" alt="Security Planning" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Tailored Security Solutions</h5>
+                            <p class="card-text">Custom security plans designed to meet specific needs.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 w-100 border-0">
+                        <img src="https://images.pexels.com/photos/18530592/pexels-photo-18530592.jpeg" alt="Patrolling Car" class="card-img-top ">
+                        <div class="card-body">
+                            <h5 class="card-title">Trained Personnels</h5>
+                            <p class="card-text">Qualified and well-trained security guards.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 w-100 border-0">
+                        <img src="https://images.pexels.com/photos/416320/pexels-photo-416320.jpeg" alt="Corporate Office" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Corporate Safety</h5>
+                            <p class="card-text">Protecting businesses with robust security.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 w-100 border-0">
+                        <img src="https://images.pexels.com/photos/274886/pexels-photo-274886.jpeg" alt="Monitoring" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">24/7 Monitoring</h5>
+                            <p class="card-text">Continuous monitoring to ensure safety.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section class="about-section parallax" id="about">
+        <div class="container">
+            <h2 class="text-center mb-4">About RavenGuard Protection</h2>
+            <p style="text-align: justify;">RavenGuard Protection is a trusted provider of security services, known for our reliability and professionalism. We are committed to delivering tailored security solutions to meet the unique needs of our clients, whether it's for an event, corporate setting, or regular patrolling. Our team of trained security personnel ensures the safety and security of your assets and people.</p>
+        </div>
+    </section>
+    
+    
+    <!-- Contact Section -->
+    <section class="contact-section parallax" id="contact">
+         <div class="container">
+        <h2 class="text-center mb-5">Contact Us</h2>
+          <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="contact-details">
+                    <h4>Address:</h4>
+                    <p>1 Yonge St, Toronto, ON M5E 1E5</p>
+                    <h4>Phone:</h4>
+                    <p>+1 (555) 555-5555</p>
+                    <h4>Email:</h4>
+                    <p><a href="mailto:info@sasuji.com">info@ravenguard.com</a></p>
+                    <h4>Location:</h4>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.2717701040156!2d-79.37709882425945!3d43.642513753122614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4cb295c1d0cf3%3A0x1f29b0772fc15f3!2s1%20Yonge%20St%2C%20Toronto%2C%20ON%20M5E%201E5!5e0!3m2!1sen!2sca!4v1723875403018!5m2!1sen!2sca" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 RavenGuard Protection. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
