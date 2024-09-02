@@ -72,7 +72,7 @@
         }
         
         .about-section {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.pexels.com/photos/451839/pexels-photo-451839.jpeg');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.pexels.com/photos/1257860/pexels-photo-1257860.jpeg');
             padding: 50px 0;
         }
         
@@ -126,11 +126,11 @@
         /* Navbar Styles */
         .navbar {
             background-color: #333;
-            padding: 10px 0;
+            padding: 5px 0;
         }
         
         .navbar-brand {
-            font-size: 1.5 rem;
+            font-size: 1.25 rem;
             font-weight: 700;
             color: #fff;
         }
@@ -226,7 +226,10 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-transparent">
         <div class="container">
-            <a class="navbar-brand ml-3" href="#">RavenGuard Protection</a>
+            <a class="navbar-brand p-0" href="#">
+                <img src="logo.png" alt="Logo" style="width: 6vh ; height: 6vh ">
+                RavenGuard Protection
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -331,10 +334,17 @@
     </section>
     
     <!-- About Section -->
-    <section class="about-section parallax" id="about" data-speed="0.5">
+    <section id="about" class="about-section parallax" style="background-color: #000; padding: 60px 0;">
         <div class="container">
-            <h2 class="text-center mb-4">About RavenGuard Protection</h2>
-            <p style="text-align: justify;">RavenGuard Protection is a trusted provider of security services, known for our reliability and professionalism. We are committed to delivering tailored security solutions to meet the unique needs of our clients, whether it's for an event, corporate setting, or regular patrolling. Our team of trained security personnel ensures the safety and security of your assets and people.</p>
+            <div class="row align-items-center">
+                <div class="col-md-6" style="color: #fff; padding: 20px;">
+                    <h2 style="margin-bottom: 20px;">About RavenGuard Protection</h2>
+                    <p style="text-align: justify;">RavenGuard Protection is a trusted provider of security services, known for our reliability and professionalism. We are committed to delivering tailored security solutions to meet the unique needs of our clients, whether it's for an event, corporate setting, or regular patrolling. Our team of trained security personnel ensures the safety and security of your assets and people.</p>
+                </div>
+                <div class="col-md-6">
+                    <img src="logo_main.png" alt="RavenGuard Protection" style="width: 100%; height: auto; display: block; margin: 0 auto;">
+                </div>
+            </div>
         </div>
     </section>
     
